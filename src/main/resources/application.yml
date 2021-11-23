@@ -1,0 +1,28 @@
+
+spring:
+  config:
+    activate:
+      on-profile: local
+    jpa:
+      hibernate:
+        ddl-auto:
+          update generate-ddl:
+            true show-sql: true
+
+my-app:
+  welcome-message: "Hello, local"
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  jpa:
+    hibernate:
+      ddl-auto:
+        update generate-ddl:
+          true show-sql: true
+
+my-app:
+  welcome-message: "Hello, dev"
